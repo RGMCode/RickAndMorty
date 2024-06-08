@@ -23,6 +23,7 @@
 		36420BA52C149A3F009900A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36420BAC2C149ADF009900A5 /* RaMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaMModel.swift; sourceTree = "<group>"; };
 		36420BAE2C149BAE009900A5 /* RaMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaMViewModel.swift; sourceTree = "<group>"; };
+		36420BB02C14A198009900A5 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +40,7 @@
 		36420B922C149A3E009900A5 = {
 			isa = PBXGroup;
 			children = (
+				36420BB02C14A198009900A5 /* Readme.md */,
 				36420B9D2C149A3E009900A5 /* RickAndMorty */,
 				36420B9C2C149A3E009900A5 /* Products */,
 			);

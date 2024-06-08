@@ -34,7 +34,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .navigationTitle("Rick and Morty Characters")
+                    .navigationTitle("Rick and Morty Char`s")
                 }
                 .onAppear {
                     viewModel.fetchCharacters()
