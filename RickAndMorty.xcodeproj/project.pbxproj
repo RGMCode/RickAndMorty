@@ -13,6 +13,7 @@
 		36420BA62C149A3F009900A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36420BA52C149A3F009900A5 /* Preview Assets.xcassets */; };
 		36420BAD2C149ADF009900A5 /* RaMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36420BAC2C149ADF009900A5 /* RaMModel.swift */; };
 		36420BAF2C149BAE009900A5 /* RaMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36420BAE2C149BAE009900A5 /* RaMViewModel.swift */; };
+		36420BB22C14EF6B009900A5 /* RaMDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36420BB12C14EF6B009900A5 /* RaMDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		36420BAC2C149ADF009900A5 /* RaMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaMModel.swift; sourceTree = "<group>"; };
 		36420BAE2C149BAE009900A5 /* RaMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaMViewModel.swift; sourceTree = "<group>"; };
 		36420BB02C14A198009900A5 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		36420BB12C14EF6B009900A5 /* RaMDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaMDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				36420B9E2C149A3E009900A5 /* RickAndMortyApp.swift */,
 				36420BA02C149A3E009900A5 /* ContentView.swift */,
+				36420BB12C14EF6B009900A5 /* RaMDetailView.swift */,
 				36420BAC2C149ADF009900A5 /* RaMModel.swift */,
 				36420BAE2C149BAE009900A5 /* RaMViewModel.swift */,
 				36420BA22C149A3F009900A5 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				36420BA12C149A3E009900A5 /* ContentView.swift in Sources */,
 				36420BAF2C149BAE009900A5 /* RaMViewModel.swift in Sources */,
 				36420B9F2C149A3E009900A5 /* RickAndMortyApp.swift in Sources */,
+				36420BB22C14EF6B009900A5 /* RaMDetailView.swift in Sources */,
 				36420BAD2C149ADF009900A5 /* RaMModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

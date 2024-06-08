@@ -9,11 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject private var viewModel = RaMViewModel()
+    @StateObject private var raMViewModel = RaMViewModel()
     
     var body: some View {
-                NavigationView {
-                    List(viewModel.characters) { character in
+        NavigationView {
+            List {
+                ForEach(raMViewModel.characters) { character in
+                    NavigationLink(destination: RaMDetailView(raMModel: .constant(character))) {
                         HStack {
                             AsyncImage(url: URL(string: character.image)) { image in
                                 image.resizable()
@@ -21,28 +23,30 @@ struct ContentView: View {
                                 ProgressView()
                             }
                             .frame(width: 100, height: 100)
-                            .clipShape(Circle())
+                            .cornerRadius(15)
+
                             VStack(alignment: .leading) {
                                 Text(character.name)
-                                    .font(.title2)
-                                    .bold()
-                                    Text("Species: \(character.species)")
-                                        .font(.title3)
-                                    Text("Gender: \(character.gender)")
-                                        .font(.title3)
-                                    Text("Status: \(character.status)")
-                                        .font(.title3)
+                                    .font(.title)
                             }
                         }
                     }
-                    .navigationTitle("Rick and Morty Char`s")
                 }
-                .onAppear {
-                    viewModel.fetchCharacters()
+                if raMViewModel.canLoadMorePages {
+                    ProgressView()
+                        .onAppear {
+                            raMViewModel.fetchCharacters()
+                        }
                 }
+            }
+            .navigationTitle("Rick and Morty Characters")
+        }
+        .onAppear {
+            raMViewModel.fetchCharacters()
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().environmentObject(RaMViewModel())
 }
