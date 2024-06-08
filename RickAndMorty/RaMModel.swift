@@ -16,7 +16,7 @@ struct Character: Codable, Identifiable {
     let gender: String
     let image: String
 }
-
-struct ChracterResponse: Codable {
+       
+struct CharacterResponse: Codable {
     let results: [Character]
 }
