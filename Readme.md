@@ -1,4 +1,4 @@
-#Rick and Morty
+# Rick and Morty
 ## Rick and Morty Rest API Test in Swift
 
 <img src="https://github.com/RGMCode/RickAndMorty/assets/90555783/0f3cc0c7-2526-4736-8e2d-41da693db627"  style="width: 400px;"/>
