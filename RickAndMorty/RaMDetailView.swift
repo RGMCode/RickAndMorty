@@ -13,50 +13,53 @@ struct RaMDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack {
-            AsyncImage(url: URL(string: raMModel.image)) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 370, height: 370)
-            .cornerRadius(30)
-            .overlay(
-                     RoundedRectangle(cornerRadius: 15)
-                     .stroke(
-                             LinearGradient(
+        ZStack {
+            Color.teal.edgesIgnoringSafeArea(.all)
+            VStack {
+                AsyncImage(url: URL(string: raMModel.image)) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: 370, height: 370)
+                .cornerRadius(30)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(
+                            LinearGradient(
                                 gradient: Gradient(colors: [.purple, .blue, .teal]),
                                 startPoint: .topLeading,
                                 endPoint: .bottomTrailing
-                             ),
-                             lineWidth: 15)
-            )
-            .padding()
-            
-            Text(raMModel.name)
-                .font(.system(size: 50))
-                .fontWeight(.bold)
-            Text("Species: \(raMModel.species)")
-                .font(.title2)
-            Text("Status: \(raMModel.status)")
-                .font(.title2)
-            Text("Gender: \(raMModel.gender)")
-                .font(.title2)
-            Text("Origin: \(raMModel.origin.name)")
-                .font(.title2)
-            Text("Location: \(raMModel.location.name)")
-                .font(.title2)
-            
-            Spacer()
-            
-            Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }){
-                Image(systemName: "arrow.uturn.backward.square.fill")
-                    .font(.system(size: 45))
-                    .foregroundColor(.teal)
+                            ),
+                            lineWidth: 15)
+                )
+                .padding()
+                
+                Text(raMModel.name)
+                    .font(.system(size: 50))
+                    .fontWeight(.bold)
+                Text("Species: \(raMModel.species)")
+                    .font(.title2)
+                Text("Status: \(raMModel.status)")
+                    .font(.title2)
+                Text("Gender: \(raMModel.gender)")
+                    .font(.title2)
+                Text("Origin: \(raMModel.origin.name)")
+                    .font(.title2)
+                Text("Location: \(raMModel.location.name)")
+                    .font(.title2)
+                
+                Spacer()
+                
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }){
+                    Image(systemName: "arrow.uturn.backward.square.fill")
+                        .font(.system(size: 45))
+                        .foregroundColor(.teal)
+                }
+                .padding()
             }
-            .padding()
         }
         .navigationTitle("Character Details")
         .navigationBarTitleDisplayMode(.inline)
