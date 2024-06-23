@@ -31,7 +31,7 @@ struct ContentView: View {
                                         .font(.title)
                                 }
                             }
-                        }
+                        }.listRowBackground(Color.teal)
                     }
                     if raMViewModel.canLoadMorePages {
                         ProgressView()
@@ -41,8 +41,7 @@ struct ContentView: View {
                     }
                 }
                 .scrollContentBackground(.hidden)
-                .background(Color.teal)
-                .navigationTitle("Rick and Morty Characters")
+                .navigationTitle("Rick and Morty Char's")
             }
             .onAppear {
                 print("ContentView appeared, fetching characters")
