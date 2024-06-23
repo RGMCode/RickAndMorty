@@ -29,6 +29,7 @@ struct ContentView: View {
                                 VStack(alignment: .leading) {
                                     Text(character.name)
                                         .font(.title)
+                                        .foregroundColor(.white)
                                 }
                             }
                         }.listRowBackground(Color.teal)
@@ -41,7 +42,15 @@ struct ContentView: View {
                     }
                 }
                 .scrollContentBackground(.hidden)
-                .navigationTitle("Rick and Morty Char's")
+                .navigationBarTitleDisplayMode(.inline)
+                 .toolbar {
+                          ToolbarItem(placement: .principal) {
+                              Text("Rick and Morty Char's")
+                              .foregroundColor(.white)
+                              .font(.largeTitle)
+                                }
+                            }
+    
             }
             .onAppear {
                 print("ContentView appeared, fetching characters")
